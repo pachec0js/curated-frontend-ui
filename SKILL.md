@@ -1,6 +1,6 @@
 ---
 name: curated-frontend-ui
-version: 1.0.0
+version: 1.0.1
 description: >-
   Especialista sênior em design e implementação de front-end com ecossistema Tailwind CSS curado.
   Utilize esta skill sempre que o usuário pedir criação de landing pages, interfaces completas,
@@ -10,7 +10,7 @@ description: >-
   animação progressiva e quality gates rigorosos.
 ---
 
-# Curated Frontend UI Skill (v1.0.0)
+# Curated Frontend UI Skill (v1.0.1)
 
 > **Princípio Orientador:** *"A skill não deve ser especialista em usar muitas bibliotecas. Deve ser especialista em entregar excelentes interfaces, escolhendo as bibliotecas certas quando necessário."*
 
@@ -66,6 +66,11 @@ Toda implementação assume a seguinte stack homogênea baseada em Tailwind CSS:
    - Se precisar de gráficos avançados, mapas ou editores ricos, siga rigorosamente [escape-hatch.md](./references/escape-hatch.md) (Recharts/Tremor, Leaflet, TipTap) preservando os tokens Tailwind do projeto.
 4. **Perfis Isolados (DaisyUI e Park UI)**:
    - DaisyUI e Park UI estão descritas em [alternative-profiles.md](./references/alternative-profiles.md). **NUNCA** misture suas classes com o core Tailwind em um mesmo projeto.
+5. **Alinhamento Horizontal Estrito em Botões com Ícones**:
+   - Todo botão ou link estilizado contendo ícones (à esquerda e/ou à direita) **DEVE** conter estritamente `inline-flex flex-row items-center justify-center gap-2 whitespace-nowrap`.
+   - O primitivo `Button` deve **SEMPRE** utilizar `@radix-ui/react-slot` (`Comp = asChild ? Slot : "button"`) para repasse de layout a tags `<a>`.
+   - Ícones Lucide **DEVEM** possuir `shrink-0` e dimensões fixas (`w-4 h-4` ou `w-5 h-5`).
+   - O texto interno deve estar envolto em `<span>` com alinhamento vertical e sem quebras involuntárias.
 
 ---
 

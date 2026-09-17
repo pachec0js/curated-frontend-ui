@@ -28,3 +28,70 @@ Para evitar redundâncias e indecisões do agente, siga esta hierarquia clara de
 - **Background**: `Spotlight` ou `Aurora` do **Aceternity UI**.
 - **Badge Superior**: `BorderBeam` ou `AnimatedGradientText` do **Magic UI**.
 - **Botões de Ação**: `<Button>` do **shadcn/ui** estilizado com classes do Tailwind.
+
+---
+
+## 3. Regra Mandatória: Alinhamento Horizontal Estrito em Botões com Ícones
+
+Para evitar o erro crítico onde botões com ícones quebram em múltiplas linhas verticais (ícone empilhado acima do texto, seta abaixo ou desalinhada), siga rigorosamente:
+
+### A. Classes Estruturais Obrigatórias
+Todo botão ou link com aparência de botão contendo ícones (à esquerda e/ou à direita) **DEVE** incluir estritamente:
+```tsx
+inline-flex flex-row items-center justify-center gap-2 whitespace-nowrap
+```
+
+### B. Primitivo Button com Radix Slot (`asChild`)
+O componente `Button` do shadcn/ui deve **SEMPRE** utilizar `@radix-ui/react-slot` para suportar composição polimórfica com links (`<a>`):
+```tsx
+import * as React from "react"
+import { Slot } from "@radix-ui/react-slot"
+import { cva, type VariantProps } from "class-variance-authority"
+import { cn } from "@/lib/utils"
+
+const buttonVariants = cva(
+  "inline-flex flex-row items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+  // variantes...
+)
+
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean
+}
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button"
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    )
+  }
+)
+Button.displayName = "Button"
+
+export { Button, buttonVariants }
+```
+
+### C. Ícones Lucide com Dimensões Fixas e `shrink-0`
+Os ícones (`lucide-react`) dentro de botões **DEVEM SEMPRE** conter a classe `shrink-0` e dimensões fixas proporcionais:
+- `w-4 h-4 shrink-0` para tamanhos padrão (`default`, `sm`)
+- `w-5 h-5 shrink-0` para tamanhos maiores (`lg`, Hero CTA)
+
+### D. Envolvimento Seguro do Texto Interno
+O texto do botão com ícone deve estar **SEMPRE** envolvido em uma tag `<span>` para assegurar o alinhamento no eixo cruzado e impedir quebras involuntárias:
+```tsx
+{/* Padrão correto */}
+<Button asChild>
+  <a href="#contato" className="inline-flex flex-row items-center justify-center gap-2 whitespace-nowrap">
+    <Calendar className="w-4 h-4 shrink-0" />
+    <span>Agendar Consulta</span>
+    <ArrowRight className="w-4 h-4 shrink-0" />
+  </a>
+</Button>
+```
+

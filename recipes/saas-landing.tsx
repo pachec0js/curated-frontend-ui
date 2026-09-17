@@ -29,9 +29,9 @@ export default function SaasLanding() {
 
           <a 
             href="#comecar" 
-            className="text-xs font-semibold px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all"
+            className="text-xs font-semibold px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all inline-flex flex-row items-center justify-center gap-2 whitespace-nowrap"
           >
-            Acessar Console
+            <span>Acessar Console</span>
           </a>
         </div>
       </header>
@@ -42,8 +42,8 @@ export default function SaasLanding() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#0284C7]/20 blur-[130px] rounded-full pointer-events-none" />
 
         <div className="relative max-w-4xl mx-auto px-6 space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-300 text-xs font-medium">
-            <Sparkles className="w-3.5 h-3.5" />
+          <div className="inline-flex flex-row items-center justify-center gap-2 px-3.5 py-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-300 text-xs font-medium whitespace-nowrap">
+            <Sparkles className="w-3.5 h-3.5 shrink-0" />
             <span>Novo: Motor de Inferência v2.4 liberado</span>
           </div>
 
@@ -56,12 +56,12 @@ export default function SaasLanding() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <button className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-[#0284C7] hover:bg-[#0369A1] text-white font-semibold text-sm shadow-lg shadow-sky-500/20 transition-all flex items-center justify-center gap-2">
+            <button className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-[#0284C7] hover:bg-[#0369A1] text-white font-semibold text-sm shadow-lg shadow-sky-500/20 transition-all inline-flex flex-row items-center justify-center gap-2 whitespace-nowrap">
               <span>Iniciar Teste Gratuito</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 shrink-0" />
             </button>
-            <button className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-semibold text-sm transition-all flex items-center justify-center gap-2">
-              <Terminal className="w-4 h-4" />
+            <button className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-semibold text-sm transition-all inline-flex flex-row items-center justify-center gap-2 whitespace-nowrap">
+              <Terminal className="w-4 h-4 shrink-0" />
               <span>Ver Documentação</span>
             </button>
           </div>
@@ -94,8 +94,9 @@ export default function SaasLanding() {
                 <h3 className="text-xl font-bold text-white">Segurança Enterprise</h3>
                 <p className="text-sm text-slate-400">Criptografia ponta a ponta e conformidade SOC-2 Tipo II nativa.</p>
               </div>
-              <div className="mt-6 flex items-center gap-2 text-xs text-emerald-400">
-                <Check className="w-4 h-4" /> 99.99% Uptime SLA
+              <div className="mt-6 inline-flex flex-row items-center gap-2 text-xs text-emerald-400 whitespace-nowrap">
+                <Check className="w-4 h-4 shrink-0" />
+                <span>99.99% Uptime SLA</span>
               </div>
             </div>
           </div>

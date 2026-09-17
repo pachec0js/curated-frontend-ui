@@ -44,8 +44,9 @@ export default function LocalBusinessLanding() {
             <span className="flex items-center gap-1"><MapPin className="w-3.5 h-3.5 text-[#91A89D]" /> Av. Paulista, 1000 - Jardins, SP</span>
             <span className="hidden md:flex items-center gap-1"><Clock className="w-3.5 h-3.5 text-[#91A89D]" /> Seg a Sex: 08h às 19h</span>
           </div>
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-[#91A89D] hover:underline flex items-center gap-1 font-medium">
-            <Phone className="w-3 h-3" /> Agendamento direto: (11) 99999-9999
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-[#91A89D] hover:underline inline-flex flex-row items-center gap-1.5 font-medium whitespace-nowrap">
+            <Phone className="w-3 h-3 shrink-0" />
+            <span>Agendamento direto: (11) 99999-9999</span>
           </a>
         </div>
       </div>
@@ -70,10 +71,10 @@ export default function LocalBusinessLanding() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#283B35] hover:bg-[#1E7E55] text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 shadow-sm hover:shadow flex items-center gap-2"
+              className="bg-[#283B35] hover:bg-[#1E7E55] text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 shadow-sm hover:shadow inline-flex flex-row items-center justify-center gap-2 whitespace-nowrap"
             >
-              <Calendar className="w-4 h-4" />
-              Agendar Consulta
+              <Calendar className="w-4 h-4 shrink-0" />
+              <span>Agendar Consulta</span>
             </a>
           </div>
 
@@ -98,9 +99,10 @@ export default function LocalBusinessLanding() {
               href={whatsappUrl} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="block w-full text-center bg-[#283B35] text-white py-3 rounded-full font-semibold"
+              className="w-full inline-flex flex-row items-center justify-center gap-2 text-center bg-[#283B35] text-white py-3 rounded-full font-semibold whitespace-nowrap"
             >
-              Agendar Consulta pelo WhatsApp
+              <Phone className="w-4 h-4 shrink-0" />
+              <span>Agendar Consulta pelo WhatsApp</span>
             </a>
           </div>
         )}
@@ -110,9 +112,9 @@ export default function LocalBusinessLanding() {
       <section className="relative pt-12 pb-20 md:py-28 overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 bg-[#E8E2D8]/80 text-[#283B35] px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide">
-              <ShieldCheck className="w-4 h-4 text-[#6B8071]" />
-              CRM 123456 • RQE 7890 • Médica Especialista pela SBD
+            <div className="inline-flex flex-row items-center gap-2 bg-[#E8E2D8]/80 text-[#283B35] px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide whitespace-nowrap">
+              <ShieldCheck className="w-4 h-4 text-[#6B8071] shrink-0" />
+              <span>CRM 123456 • RQE 7890 • Médica Especialista pela SBD</span>
             </div>
             
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-[#283B35] leading-[1.15]">
@@ -128,23 +130,23 @@ export default function LocalBusinessLanding() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#283B35] hover:bg-[#1E7E55] text-white px-8 py-4 rounded-full text-base font-semibold transition-all duration-200 shadow-md hover:shadow-lg flex items-center justify-center gap-3 text-center"
+                className="bg-[#283B35] hover:bg-[#1E7E55] text-white px-8 py-4 rounded-full text-base font-semibold transition-all duration-200 shadow-md hover:shadow-lg inline-flex flex-row items-center justify-center gap-2 whitespace-nowrap text-center"
               >
                 <span>Agendar Avaliação Personalizada</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 shrink-0" />
               </a>
 
               <a 
                 href="#tratamentos"
-                className="bg-transparent hover:bg-[#E8E2D8]/50 text-[#283B35] border border-[#283B35]/20 px-6 py-4 rounded-full text-base font-semibold transition-colors flex items-center justify-center text-center"
+                className="bg-transparent hover:bg-[#E8E2D8]/50 text-[#283B35] border border-[#283B35]/20 px-6 py-4 rounded-full text-base font-semibold transition-colors inline-flex flex-row items-center justify-center gap-2 whitespace-nowrap text-center"
               >
-                Conhecer Tratamentos
+                <span>Conhecer Tratamentos</span>
               </a>
             </div>
 
             <div className="pt-4 flex items-center gap-6 text-xs text-[#232B28]/70">
-              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[#6B8071]" /> Atendimento Pontual</span>
-              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[#6B8071]" /> Plano de Cuidados Exclusivo</span>
+              <span className="inline-flex flex-row items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[#6B8071] shrink-0" /> <span>Atendimento Pontual</span></span>
+              <span className="inline-flex flex-row items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[#6B8071] shrink-0" /> <span>Plano de Cuidados Exclusivo</span></span>
             </div>
           </div>
 
@@ -210,8 +212,9 @@ export default function LocalBusinessLanding() {
                   <h3 className="font-serif text-xl font-semibold text-[#283B35] mb-3">{item.title}</h3>
                   <p className="text-sm text-[#232B28]/80 leading-relaxed mb-6">{item.desc}</p>
                 </div>
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-[#283B35] flex items-center gap-1.5 hover:gap-2.5 transition-all text-[#6B8071]">
-                  Consultar disponibilidade <ArrowRight className="w-4 h-4" />
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-[#6B8071] inline-flex flex-row items-center gap-1.5 hover:gap-2.5 transition-all whitespace-nowrap">
+                  <span>Consultar disponibilidade</span>
+                  <ArrowRight className="w-4 h-4 shrink-0" />
                 </a>
               </div>
             ))}
@@ -239,7 +242,7 @@ export default function LocalBusinessLanding() {
                   className="w-full text-left px-6 py-5 font-medium text-base text-[#283B35] flex justify-between items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B8071]"
                 >
                   <span>{faq.q}</span>
-                  <ChevronDown className={cn("w-5 h-5 text-[#6B8071] transition-transform duration-200", openFaq === idx && "rotate-180")} />
+                  <ChevronDown className={cn("w-5 h-5 text-[#6B8071] transition-transform duration-200 shrink-0", openFaq === idx && "rotate-180")} />
                 </button>
                 {openFaq === idx && (
                   <div className="px-6 pb-5 text-sm text-[#232B28]/80 leading-relaxed border-t border-[#E8E2D8]/60 pt-3">

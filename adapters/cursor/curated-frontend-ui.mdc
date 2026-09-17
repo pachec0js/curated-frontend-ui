@@ -11,3 +11,5 @@ Ao desenvolver componentes front-end, interfaces ou landing pages neste projeto:
 3. Use o Flowbite apenas para layouts macro estáticos de marketing (pricing, footers, testimonials).
 4. Use Magic UI e Aceternity UI sob demanda no perfil Visual Experience (microinterações e hero 3D).
 5. Respeite as regras de acessibilidade e responsividade (320px a 1440px sem overflow lateral).
+6. Botões com ícones devem usar estritamente `inline-flex flex-row items-center justify-center gap-2 whitespace-nowrap`, ícones com `shrink-0` e primitivo Button com `@radix-ui/react-slot` (`asChild`).
+

@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 #
 # Curated Frontend UI - Instalador Multi-Agente
-# Versão: 1.0.0
+# Versão: 1.0.1
 # Suporta: Antigravity/Gemini CLI, Claude Code, Cursor, Windsurf, GitHub Copilot, Codex CLI
 #
 
 set -e
 
-VERSION="1.0.0"
+VERSION="1.0.1"
 SKILL_NAME="curated-frontend-ui"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 

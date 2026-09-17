@@ -1,6 +1,6 @@
 # Curated Front-End UI 🎨✨
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)](./CHANGELOG.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](./LICENSE)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v3_%7C_v4-38bdf8.svg)](https://tailwindcss.com/)
 [![React](https://img.shields.io/badge/React-18_%7C_19-61dafb.svg)](https://react.dev/)

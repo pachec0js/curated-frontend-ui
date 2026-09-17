@@ -27,3 +27,10 @@ Nenhum front-end desenvolvido sob esta skill deve ser considerado concluído sem
 ### D. Qualidade de Código
 - [ ] **TypeScript**: Sem erros de tipagem (`tsc --noEmit`).
 - [ ] **Componentização**: Cada seção vive em arquivo próprio dentro de `components/sections/`.
+
+### E. Alinhamento de Botões & Ícones (Mandatório)
+- [ ] **Alinhamento Horizontal Estrito**: Todo botão ou link com aparência de botão contendo ícones (esquerda e/ou direita) possui impreterivelmente `inline-flex flex-row items-center justify-center gap-2 whitespace-nowrap` para impedir empilhamento vertical do ícone, texto e seta.
+- [ ] **Suporte a Radix Slot (`asChild`)**: O primitivo `Button` (shadcn/ui) utiliza `@radix-ui/react-slot` (`Comp = asChild ? Slot : "button"`) para que tags `<a>` recebam o layout flexível corretamente sem perda de classes.
+- [ ] **Ícones Lucide com Dimensões e `shrink-0`**: Todos os ícones Lucide possuem dimensões fixas (ex: `w-4 h-4` ou `w-5 h-5`) e a classe `shrink-0` para nunca serem comprimidos ou deformados.
+- [ ] **Texto Envolvido em `<span>`**: O texto interno do botão está envolvido em `<span>` com alinhamento vertical e sem quebra involuntária.
+
