@@ -1,0 +1,13 @@
+---
+description: Diretrizes de front-end especializado e curadoria Tailwind (shadcn/ui, Flowbite, Magic UI, Aceternity UI)
+globs: **/*.{tsx,jsx,ts,js,html,css}
+---
+
+# Curated Frontend UI - Regras do Cursor
+
+Ao desenvolver componentes front-end, interfaces ou landing pages neste projeto:
+1. Siga a stack homogênea de Tailwind CSS + Lucide Icons + `lib/utils.ts` (`cn`).
+2. Para qualquer elemento interativo com estado (Dialogs, Dropdowns, Forms, Inputs, Accordions), use estritamente **shadcn/ui**.
+3. Use o Flowbite apenas para layouts macro estáticos de marketing (pricing, footers, testimonials).
+4. Use Magic UI e Aceternity UI sob demanda no perfil Visual Experience (microinterações e hero 3D).
+5. Respeite as regras de acessibilidade e responsividade (320px a 1440px sem overflow lateral).

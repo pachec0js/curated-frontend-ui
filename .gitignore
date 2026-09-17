@@ -1,0 +1,13 @@
+# Sistema / OS
+.DS_Store
+Thumbs.db
+
+# Backups do instalador
+*.bak*
+
+# Node / dependências se houver testes locais
+node_modules/
+.npm/
+
+# Logs
+*.log
